@@ -4,6 +4,7 @@ import { classToClass } from 'class-transformer';
 import CreateUserService from '@modules/users/services/CreateUserService';
 import DeleteUserService from '@modules/users/services/DeleteUserService';
 import UpdateUserService from '@modules/users/services/UpdateUserService';
+import ListUserService from '@modules/users/services/ListUserService';
 
 export default class UsersController {
     public async create(
@@ -40,6 +41,15 @@ export default class UsersController {
             email,
             role,
         });
+        return response.json(classToClass(user));
+    }
+
+    public async listAll(
+        request: Request,
+        response: Response,
+    ): Promise<Response> {
+        const listAllUsers = container.resolve(ListUserService);
+        const user = await listAllUsers.execute();
         return response.json(classToClass(user));
     }
 }

@@ -44,4 +44,6 @@ usersRouter.put(
     usersController.update,
 );
 
+usersRouter.get('/', usersController.listAll);
+
 export default usersRouter;

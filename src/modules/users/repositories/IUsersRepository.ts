@@ -5,4 +5,5 @@ export default interface IUsersRepository {
     create(data: IUserDTO): Promise<User>;
     delete(id: string): Promise<void | undefined>;
     update(data: IUserDTO): Promise<User>;
+    listAll(): Promise<User[]>;
 }
