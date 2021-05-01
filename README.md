@@ -1,8 +1,8 @@
 #Completar o CRUD de Users e Orders
 [x]Criar usuário
 [x] Deletar Usuário
-[] Atualizar usuário
-[] Listar usuário
+[x] Atualizar usuário
+[x] Listar usuário
 
 ---
 
