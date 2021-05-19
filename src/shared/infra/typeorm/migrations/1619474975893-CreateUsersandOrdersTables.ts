@@ -14,9 +14,10 @@ export default class CreateUsersandOrdersTables1619474975893
                 columns: [
                     {
                         name: 'id',
-                        type: 'varchar',
+                        type: 'uuid',
                         isPrimary: true,
                         generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()',
                     },
                     {
                         name: 'name',
@@ -54,9 +55,10 @@ export default class CreateUsersandOrdersTables1619474975893
                 columns: [
                     {
                         name: 'id',
-                        type: 'varchar',
+                        type: 'uuid',
                         isPrimary: true,
                         generationStrategy: 'uuid',
+                        default: 'uuid_generate_v4()',
                     },
                     {
                         name: 'name',
@@ -72,7 +74,7 @@ export default class CreateUsersandOrdersTables1619474975893
                     },
                     {
                         name: 'doctor_id',
-                        type: 'varchar',
+                        type: 'uuid',
                     },
                     {
                         name: 'created_at',
